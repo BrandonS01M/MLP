@@ -1,0 +1,289 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+html{
+    scroll-behavior: smooth;
+    overflow: overlay;
+    font-family: 'Quicksand', sans-serif;
+    color: #61666b;
+}
+
+body{
+    font-size: 1.3rem;
+}
+ 
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0c0e13;
+    border-radius: 10px;
+    
+    
+}
+
+::-webkit-scrollbar-corner{
+    border-radius: 10px;
+    background: transparent;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    background-color: #212738;
+    align-items: center;
+    padding: 0px;
+    font-size: 1rem;
+    
+}
+header span{
+    color: #00E0C7;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 80px;
+    margin-right: 10px;
+}
+
+
+nav a{
+    font-weight: 600;
+    padding-right: 15px;
+}
+nav a:hover{
+    color: #00E0C7;
+}
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/*Boton de busqueda*/
+
+.Buscar{
+    position: absolute;
+    left: 65%;
+    
+}
+
+.Buscar input{
+    width: 200px;
+    height: 30px;
+    padding: 0px 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+    transition: all 0.6s;
+
+}
+
+.btn{
+    height: 43px;
+    width: 43px;
+    line-height: 40px;
+    position: absolute;
+    top: -6PX;
+    right: 0PX;
+    background: #00E0C7;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+      
+}
+
+
+/*Filtro de Categoria*/
+
+input[type="radio"]{
+    display: none;
+}
+
+.container_categoria{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.container_categoria label{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 18px;
+    background: #c1c9cf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container_categoria label:hover{
+    background: #2f97ba;
+    color: white;
+}
+
+
+
+
+/*Cartas - Articulos Publicados*/
+
+.container_cartas{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cartas{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:20px;
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.cartas .carta{
+    background: #212738;
+    width: 270px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.carta:hover{
+    box-shadow: 0PX 0PX 5px 5px rgba(0,0,0, 0.5);
+}
+
+/*Sistema de Filtrado*/
+
+[value="PLANTAST"]:checked ~ .cartas .carta:not([data-category~="PLANTAS"]),
+[value="PLANTAS TERRESTRES"]:checked ~ .cartas .carta:not([data-category~="PLANTASTERRESTRES"]),
+[value="PLANTAS ACUATICAS"]:checked ~ .cartas .carta:not([data-category~="PLANTASACUATICAS"]),
+[value="PLANTAS NOCTURNAS"]:checked ~ .cartas .carta:not([data-category~="PLANTASNOCTURNAS"]),
+[value="HERRAMIENTAST"]:checked ~ .cartas .carta:not([data-category~="HERRAMIENTAS"]),
+[value="HERRAMIENTAS ELECTRICAS"]:checked ~ .cartas .carta:not([data-category~="HERRAMIENTASELECTRICAS"]),
+[value="HERRAMIENTAS DE MANO"]:checked ~ .cartas .carta:not([data-category~="HERRAMIENTASDEMANO"]){
+    display: none;
+}
+
+
+[value="TODOSP"]:checked ~ .container_categoria [for="TODOS"],
+[value="PLANTAST"]:checked ~ .container_categoria [for="PLANTAS"],
+[value="PLANTAS TERRESTRES"]:checked ~ .container_categoria [for="PLANTASTERRESTRES"],
+[value="PLANTAS ACUATICAS"]:checked ~ .container_categoria [for="PLANTASACUATICAS"],
+[value="PLANTAS NOCTURNAS"]:checked ~ .container_categoria [for="PLANTASNOCTURNAS"],
+[value="HERRAMIENTAST"]:checked ~ .container_categoria [for="HERRAMIENTAS"],
+[value="HERRAMIENTAS ELECTRICAS"]:checked ~ .container_categoria [for="HERRAMIENTASELECTRICAS"],
+[value="HERRAMIENTAS DE MANO"]:checked ~ .container_categoria [for="HERRAMIENTASDEMANO"]
+{
+    background: #2f97ba;
+    color: white;
+}
+
+
+
+
+/*Sistema de Filtrado*/
+
+.carta .ctn_img{
+    width: 100%;
+}
+
+.carta .ctn_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carta h2{
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 0px 20px;
+    color: rgb(226, 237, 248);
+}
+
+.carta span{
+    display: block;
+    margin-top: 10px;
+    padding: 0px 20px;
+    color: rgb(226, 237, 248);
+}
+
+.ctn_opc{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+.ctn_opc li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 3px 2px;
+    background:#075d70 ;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carta button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: white ;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.carta button:hover{
+    background: #FFC619;
+    color: white;
+}
+
+
+/*Footer*/
+
+footer{
+    margin-top: 80px;
+    height: 100px;
+    background: #0c0e13;
+    color: rgba(255,255,255,.5);
+    text-align: center;
+    padding-top:20px;
+    font-size: 15px;
+    line-height: .8rem;
+}
+
+
+/*Footer*/
+
+

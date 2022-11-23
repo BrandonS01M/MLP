@@ -1,0 +1,301 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+html{
+    scroll-behavior: smooth;
+    overflow: overlay;
+    font-family: 'Quicksand', sans-serif;
+    color: #61666b;
+}
+
+body{
+    font-size: 1.3rem;
+}
+ 
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0c0e13;
+    border-radius: 10px;
+    
+    
+}
+
+::-webkit-scrollbar-corner{
+    border-radius: 10px;
+    background: transparent;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    background-color: #212738;
+    align-items: center;
+    padding: 0px;
+    font-size: 1rem;
+    
+}
+header span{
+    color: #00E0C7;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 80px;
+    margin-right: 10px;
+}
+
+
+nav a{
+    font-weight: 600;
+    padding-right: 15px;
+}
+nav a:hover{
+    color: #00E0C7;
+}
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/*Boton de busqueda*/
+
+.Buscar{
+    position: absolute;
+    left: 65%;
+    
+}
+
+.Buscar input{
+    width: 200px;
+    height: 30px;
+    padding: 0px 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+    transition: all 0.6s;
+
+}
+
+.btn{
+    height: 43px;
+    width: 43px;
+    line-height: 40px;
+    position: absolute;
+    top: -6PX;
+    right: 0PX;
+    background: #00E0C7;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+      
+}
+
+/*Carrusel de imagenes /////////////////////*/
+
+.slider-container img{
+    height: 800px;
+    filter: brightness(50%);
+
+}
+/*Texto Sliders*/
+.slider-pre{
+    position: relative;
+    top: -700px;
+    left: 100px;
+    color: White;
+}
+
+#pre-1{
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+#pre-2{
+    
+
+}
+
+#pre-3{
+    left: 55%;
+    top: -650px;
+}
+
+
+
+/*Texto Sliders*/
+
+.slider-pre span{
+    color: #00E0C7;
+}
+
+.slider-container{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,.7);
+    margin-bottom: 100px;
+}
+
+.slider-section{
+    width: 100%;
+}
+
+.sliderA{
+    display: flex;
+    width: 300%;
+    height: 550px;
+    margin-left: -100%;    
+}
+
+.slider-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,.7);
+    top: 50%;
+    transform: translateY(-120px);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slider-btn:hover{
+    background: white;
+}
+
+.slider-btn-right{
+    right: 5px;
+    border-radius: 30px;
+
+}
+
+.slider-btn-left{
+    left: 5px;
+    border-radius: 30px;
+}
+
+/*Carrusel de imagenes*/
+
+/*Promoción de productos*/
+
+.box{
+    width: 300px;
+    height: 460px;
+    background-color: #212738;
+    margin-left: 50px ;
+    border-radius:20px;
+    color: white;
+    line-height: 1.6rem;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.box:hover{
+    box-shadow:  0px 6px 7px rgba(0,0,0,.7);
+}
+
+.rating{
+    text-align: center;
+}
+
+.info-box{
+    display: flex;
+    flex-direction:column;
+    margin-left: 20px;
+    
+}
+
+.info-box button{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    left: 80px;
+    top: -10px;
+    background: orange;
+    border: none;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.info-box button:hover{
+    background: rgb(255, 119, 0);
+    color: white;
+}
+.box img{
+    height: 315px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.box-ad{
+    display: flex;
+}
+
+section{
+    margin-bottom: 100px;
+}
+
+#pv{
+    margin-left: 70px;
+}
+
+.orange-color{
+    color: orange;
+}
+    
+
+/*Promoción de productos*/
+
+/*Footer*/
+
+footer{
+    height: 100px;
+    background: #0c0e13;
+    color: rgba(255,255,255,.5);
+    text-align: center;
+    padding-top:20px;
+    font-size: 15px;
+    line-height: .8rem;
+}
+
+
+/*Footer*/
